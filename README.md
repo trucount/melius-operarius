@@ -1,6 +1,6 @@
 # Melius Operarius Engine
 
-Melius Operarius is an AI-driven website management engine that operates based on instructions stored in a [Pantry](https://getpantry.cloud/) bucket. It functions as a virtual programmer that can update themes, create pages, and manage dynamic components.
+An AI-driven automation engine that reads structured instructions and automatically updates, builds, and manages software projects.
 
 ## 🚀 Key Features
 
@@ -16,6 +16,15 @@ Melius Operarius is an AI-driven website management engine that operates based o
   - `{product_banner}`: Showcases products with images and purchase info.
   - `{image}` / `{video}`: Embeds media directly.
 - **Holiday Awareness**: Automatically adds New Year wishes or offers if detected.
+
+## Problem
+
+Developers often need to repeatedly update files, UI layouts, and configurations.  
+Manual edits are slow and error-prone.
+
+## Solution
+
+Melius Operarius uses structured instructions to automatically modify projects while maintaining consistency.
 
 ## 🛠️ Setup
 
