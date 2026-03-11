@@ -1,0 +1,33 @@
+{
+  "theme": {
+    "description": "Professional engineering theme with deep slate background, brushed steel accents, and industrial orange highlights.",
+    "primary_color": "#f97316",
+    "secondary_color": "#475569",
+    "background_color": "#0f172a",
+    "text_color": "#f8fafc"
+  },
+  "special_mentions": "Create a high-end feel for a 'New Part Opening' event. Use industrial imagery and clean typography. Ensure all components like forms and countdowns are styled as clean white boxes.",
+  "pages": [
+    {
+      "id": "home",
+      "title": "Grand Opening | Industrial Parts",
+      "content": "Welcome to the future of precision engineering. We are proud to announce the opening of our new specialized parts facility. {countdown}2026-06-01{/countdown} Join us for the unveiling of the next generation of industrial components.",
+      "strict_text": "Excellence in Precision Engineering Since 1998.",
+      "theme": null
+    },
+    {
+      "id": "products",
+      "title": "Our Precision Parts",
+      "content": "Discover our new range of high-performance components designed for extreme environments. {product_banner}Titanium Alloy Bolt|https://images.unsplash.com/photo-1530124560677-bbfda2bcbd6e|$45.00|sales@industrial.com{/product_banner} {product_banner}Carbon Fiber Housing|https://images.unsplash.com/photo-1581092160607-ee22621dd758|$120.00|sales@industrial.com{/product_banner}",
+      "strict_text": "All parts certified to ISO 9001:2015 standards.",
+      "theme": null
+    },
+    {
+      "id": "contact",
+      "title": "Register Your Interest",
+      "content": "Be the first to receive our catalog and event invitations. Please fill out the form below to stay updated. {form}New Part Opening Registration{/form} {live_time}",
+      "strict_text": "Privacy Policy: Your data is secure with us.",
+      "theme": null
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+name: Save Secret
+
+on:
+  workflow_dispatch:
+
+jobs:
+  save-secret:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Save secret to file
+        run: |
+          echo "${{ secrets.PANTRY_ID }}" > pantry.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pantry-secret
+          path: pantry.txt

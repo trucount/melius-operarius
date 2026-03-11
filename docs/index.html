@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melius Engine Overview Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Melius Engine – Repository Overview</h1>
+      <button id="refreshButton">Refresh</button>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <h2>Repository Folders</h2>
+        <p class="muted">Shows files from: <code>log</code>, <code>history</code>, <code>to-do</code>, and <code>error</code>.</p>
+      </section>
+
+      <section id="foldersGrid" class="folders-grid"></section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>event.json Editor</h2>
+          <button id="downloadEventButton">Download edited event.json</button>
+        </div>
+        <p class="muted">
+          GitHub Pages is static, so this page cannot write back to the repository directly.
+          You can edit here and download the updated file.
+        </p>
+        <textarea id="eventEditor" spellcheck="false"></textarea>
+        <p id="eventStatus" class="muted"></p>
+      </section>
+    </main>
+
+    <template id="folderTemplate">
+      <article class="card">
+        <div class="card-header">
+          <h3></h3>
+          <span class="pill"></span>
+        </div>
+        <div class="files"></div>
+      </article>
+    </template>
+
+    <template id="fileTemplate">
+      <div class="file">
+        <div class="file-meta">
+          <strong class="file-name"></strong>
+          <span class="file-size"></span>
+        </div>
+        <div class="file-path muted"></div>
+        <pre class="file-content"></pre>
+      </div>
+    </template>
+
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>

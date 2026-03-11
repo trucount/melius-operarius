@@ -1,0 +1,44 @@
+name: Melius Operarius Engine
+
+on:
+  schedule:
+    - cron: '*/7 * * * *'
+  workflow_dispatch:
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests
+
+      - name: Run Melius Operarius Engine
+        env:
+          PANTRY_ID: ${{ secrets.PANTRY_ID }}
+          OPENROUTER_API_KEY_1: ${{ secrets.OPENROUTER_API_KEY_1 }}
+          OPENROUTER_API_KEY_2: ${{ secrets.OPENROUTER_API_KEY_2 }}
+          OPENROUTER_API_KEY_3: ${{ secrets.OPENROUTER_API_KEY_3 }}
+          OPENROUTER_API_KEY_4: ${{ secrets.OPENROUTER_API_KEY_4 }}
+          OPENROUTER_API_KEY_5: ${{ secrets.OPENROUTER_API_KEY_5 }}
+        run: |
+          python melius-engine/agent.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "Melius Operarius"
+          git config --global user.email "appointease.dev@gmail.com"
+          git add .
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Melius Operarius: Synchronization Cycle" && git push)
