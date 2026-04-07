@@ -144,6 +144,36 @@ button:hover {
     background: var(--secondary-color);
 }
 
+.blank-white-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    color: #0f172a;
+}
+
+.blank-white-form label {
+    color: #0f172a;
+}
+
+.blank-white-form input {
+    background: white;
+    color: #0f172a;
+    border-color: #e5e7eb;
+}
+
+.blank-white-form input:focus {
+    border-color: #3b82f6;
+}
+
+.blank-white-form button {
+    background: #3b82f6;
+    color: white;
+}
+
+.blank-white-form button:hover {
+    background: #1e40af;
+}
+
 footer {
     padding: 2rem;
     text-align: center;
